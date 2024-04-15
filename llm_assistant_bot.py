@@ -16,7 +16,7 @@ checkmodel
 model
 """
 
-bot = telebot.TeleBot('7176555672:AAFRT8nbLrCsoXcsBA-R50sWuE7KGSgbKig')
+bot = telebot.TeleBot(bot_id)
 logger = logging.getLogger('bot_logger')
 logger.setLevel(logging.INFO)
 handler = RotatingFileHandler('bot.log', maxBytes=1e6, backupCount=5)
@@ -25,7 +25,7 @@ handler.setFormatter(formatter)
 logger.addHandler(handler)
 
 def send_telegram_notification(message):
-    bot.send_message('@llm_bot_notifier', message)
+    bot.send_message(chat_id, message)
 
 model_wrapper = ModelWrapper() # внутри класса описание
 

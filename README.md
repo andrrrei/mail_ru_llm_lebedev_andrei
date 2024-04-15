@@ -3,7 +3,7 @@
 1. Модель обучается на 3 датасетах: Den4ikAI/russian_dialogues, IgorVolochay/russian_jokes и SiberiaSoft/SiberianPersonaChat.
 2. Добавлено top-k семплирование.
 3. Теперь в словаре остаются только те слова, которые встретились в обучающем датасете не менее 10 раз.
-4. Выбраны оптимальные гиперпараметры: temperature: 0.5, max_tokens: 8, sample_top_p: 0.9 sample_top_k: 10, decoding_strategy: top-p.
+4. Выбраны оптимальные гиперпараметры: temperature=0.0001, max_tokens=10, sample_top_p=0.001, sample_top_k=10, decoding_strategy='top-p'.
 
 В боте реализованы следуюдие функции:
 1. Логирование запросов с очисткой файлов
